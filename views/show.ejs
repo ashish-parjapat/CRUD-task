@@ -1,0 +1,20 @@
+<%for(var i=0;i<employee.length;i++){%>
+
+<tr>
+
+    <td><%= employee[i].fname %></td>
+    <td><%= employee[i].lname %></td>
+    <td><%= employee[i].email %></td>
+    <td><%= employee[i].phone %></td>
+    <td><%= employee[i].status %></td>
+    
+
+<th>  <a href="/employee-update?id=<%= employee[i]._id%>" class="btn border-shadow update">
+    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+</a>
+</th>
+<th>
+<a class="btn border-shadow delete" data-id=<%= employee[i]._id%>>
+    <span class="text-gradient"><i class="fas fa-times"></i></span></th>
+    </tr>
+<%}%>

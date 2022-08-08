@@ -1,0 +1,2 @@
+var Employeedb=require("./model");
+

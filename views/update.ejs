@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <link rel="stylesheet" href="../public/style.css">
+   
+    <title>Complete List</title>
+  
+</head>
+
+ 
+<body>
+    <%-include("./partials/header.ejs")%>
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+               
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update Employee</h2>
+                <span class="text-light">Use the below form to Update Employee Details</span>
+            </div>
+            <form  method="POST" id="update_employee">
+                <div class="update_employee">
+                    <div class="form-group">
+                        <label for="first-name" class="text-light">First Name</label>
+                        <input type="hidden" name="id" value="<%= employee._id %>">
+                        <input type="text" name="fname" value="<%= employee.fname %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name" class="text-light">Last Name</label>
+                       
+                        <input type="text" name="lname" value="<%= employee.lname %>" placeholder="">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Email</label>
+                        <input type="text" name="email" value="<%= employee.email %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Phone" class="text-light">Phone</label>
+                        <input type="text" name="phone" value="<%= employee.phone %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="text-light">Gender</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-2" name="gender" value="Male" <%= employee.gender == 'Male' ? 'checked' : '' %> >
+                            <label for="radio-2" class="radio-label">Male</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-3" name="gender" value="Female"  <%= employee.gender == 'Female' ? 'checked' : '' %>>
+                            <label for="radio-3" class="radio-label">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Designation" class="text-light">Designation</label>
+                        <input type="text" name="designation" value="<%= employee.designation %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Date_of_joining" class="text-light">Date of Joining</label>
+                        <input type="date" name="dateOfJoining" value="<%= employee.dateOfJoining %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Reporting-Manager" class="text-light">Reporting Manager</label>
+                        <input type="text" name="reportingManager" value="<%= employee.reportingManager %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="salary" class="text-light">Salary</label>
+                        <input type="number" name="salary" value="<%= employee.salary %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Reporting-Manager" class="text-light">Reporting Manager</label>
+                        <input type="number" name="employeeCode" value="<%= employee.employeeCode %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Location" class="text-light">Location</label>
+                        <input type="text" name="location" value="<%= employee.location %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="state" class="text-light">State</label>
+                        <input type="text" name="state" value="<%= employee.state %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Country" class="text-light">Country</label>
+                        <input type="text" name="country" value="<%= employee.country %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Department" class="text-light">Department</label>
+                        <input type="text" name="department" value="<%= employee.department %>" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="text-light">Status</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-4" name="status" value="Active" <%= employee.status == 'Active' ? 'checked' : '' %>>
+                            <label for="radio-4" class="radio-label">Active</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-5" name="status" value="Inactive" <%= employee.status == 'Inactive' ? 'checked' : '' %> >
+                            <label for="radio-5" class="radio-label">Inactive</label>
+                        </div>
+                    </div>
+            
+                   
+            
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Save</button>
+                    </div>
+            
+                </div>
+            </form>
+
+ 
+           
+    
+    </div>
+   
+</main>
+<%-include("./partials/_footer.ejs")%>
+<body>
+    
+
+</html>
