@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+//defing schema for databse
 var schema=new mongoose.Schema({
     fname:{
         type: String,
@@ -55,5 +56,6 @@ var schema=new mongoose.Schema({
 
 
 })
+//exporting the databse
 const Employeedb = mongoose.model('employeedb', schema);
 module.exports = Employeedb
